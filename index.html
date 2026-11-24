@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Saneey 💗</title>1
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg,#ffe4ef,#fff0f5,#fce4ec);
+  color: #a83265;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 65px 20px;
+}
+
+h1 {
+  font-size: clamp(36px,8vw,65px);
+  color: #d63384;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #d63384;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+button {
+  border: none;
+  background: #ed78a9;
+  color: white;
+  padding: 15px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 15px;
+  box-shadow: 0 5px 15px #e9a5c4;
+  transition: .3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: #d63384;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(140deg,#ffe0ed,#fff5fa);
+}
+
+.hero .emoji {
+  font-size: 65px;
+  animation: bounce 2s infinite;
+}
+
+.subtitle {
+  margin: 15px;
+  letter-spacing: 2px;
+}
+
+@keyframes bounce {
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) rotate(0); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: float 8s linear infinite;
+  z-index: 10;
+}
+
+.card {
+  background: rgba(255,255,255,.8);
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px #eab2cb;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 22px;
+  max-width: 950px;
+  margin: 35px auto;
+}
+
+.photo {
+  background: white;
+  padding: 12px 12px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px #e8a9c5;
+  transform: rotate(-2deg);
+  transition: .4s;
+}
+
+.photo:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.photo:hover {
+  transform: rotate(0) scale(1.04);
+}
+
+.photo img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.photo p {
+  margin-top: 12px;
+  font-style: italic;
+}
+
+.letter {
+  display: none;
+  animation: appear 1s;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cake {
+  font-size: 85px;
+  animation: bounce 2s infinite;
+}
+
+footer {
+  padding: 35px;
+  background: #f9c9dc;
+  color: #a83265;
+}
+
+.hidden {
+  display: none;
+}
+
+#surprise {
+  display: none;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #d63384;
+  animation: appear 1s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <div class="emoji">🎀🧸</div>
+  <p class="subtitle">A LITTLE WORLD MADE JUST FOR YOU</p>
+
+  <h1>Happy Birthday<br>Saneey! 💗</h1>
+
+  <p>To the sweetest girl, Isha Shah 🌷</p>
+
+  <button onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">
+    Open Your Surprise 💌
+  </button>
+
+  <p>✨ Made with lots of love ✨</p>
+</div>
+
+<section>
+  <h2>Today is all about YOU 🌸</h2>
+
+  <div class="card">
+    <p>
+      Some people make ordinary days feel special.
+      And you are one of those beautiful reasons
+      that make life a little more magical. 💕
+    </p>
+    <br>
+    <p>Today, the world celebrates YOU! 🎂</p>
+  </div>
+</section>
+
+<section id="memories">
+  <h2>Our Little Memory Garden 📸</h2>
+  <p>A few moments worth keeping forever 💗</p>
+
+  <div class="gallery">
+
+    <div class="photo">
+      <img src="pic4.jpg.jpeg" alt="Memory 1">
+      <p>My favourite little memory 🌷</p>
+    </div>
+
+    <div class="photo">
+      <img src="pic6.jpg.jpeg" alt="Memory 2">
+      <p>A moment to remember 💗</p>
+    </div>
+
+    <div class="photo">
+      <img src="pic3.jpg.jpeg" alt="Memory 3">
+      <p>Simply precious ✨</p>
+    </div>
+
+    <div class="photo">
+      <img src="pic5.jpg.jpeg" alt="Memory 4">
+      <p>Another beautiful memory 🧸</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>A Little Letter For You 💌</h2>
+
+  <button onclick="showLetter()">Open My Letter 💗</button>
+
+  <div class="card letter" id="letter">
+    <h2>Dear Saneey 🌷</h2>
+
+    <p>
+      Happy Birthday, Isha! 💕
+      <br><br>
+      I hope this new chapter of your life brings
+      endless happiness, beautiful opportunities,
+      peaceful days and countless reasons to smile.
+      <br><br>
+      Never stop believing in yourself.
+      Keep growing, keep shining and keep chasing
+      every dream that lives in your heart.
+      <br><br>
+      I hope you achieve everything you wish for
+      and become the amazing person you dream of being.
+      <br><br>
+      Thank you for being a beautiful part of my life.
+      <br><br>
+      Always keep that beautiful smile. 🥹
+      <br><br>
+      With lots of love,
+      <br>
+      Someone who wishes the best for you. 💗
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Make A Birthday Wish! 🎂</h2>
+
+  <div class="cake">🎂</div>
+
+  <p>Close your eyes and make a beautiful wish! ✨</p>
+
+  <button onclick="birthdaySurprise()">
+    Make a Wish 🦋
+  </button>
+
+  <div id="surprise">
+    🌸 May every beautiful dream of yours come true! 🌸
+    <br><br>
+    HAPPY BIRTHDAY, ISHA SHAH! 💗
+    <br>
+    YOU DESERVE ALL THE HAPPINESS IN THE WORLD! 🧸
+  </div>
+</section>
+
+<footer>
+  Made specially for Isha Shah 💗
+  <br>
+  Forever a special little memory 🌷
+  <br><br>
+  © A Birthday Made With Love
+</footer>
+
+<script>
+function showLetter() {
+  const letter = document.getElementById("letter");
+  letter.style.display = "block";
+  letter.scrollIntoView({behavior:"smooth", block:"center"});
+}
+
+function birthdaySurprise() {
+  document.getElementById("surprise").style.display = "block";
+
+  for(let i=0; i<30; i++) {
+    let heart = document.createElement("div");
+    heart.innerHTML = ["💗","💕","🌸","✨","🦋"][Math.floor(Math.random()*5)];
+    heart.style.position = "fixed";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.top = Math.random()*100 + "vh";
+    heart.style.fontSize = "25px";
+    heart.style.pointerEvents = "none";
+    heart.style.zIndex = "20";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>heart.remove(),2500);
+  }
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = ["💗","💕","🌸","✨","🎀"][Math.floor(Math.random()*5)];
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.fontSize = (15+Math.random()*20)+"px";
+  heart.style.animationDuration = (5+Math.random()*5)+"s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(()=>heart.remove(),10000);
+}
+
+setInterval(createHeart,500);
+</script>
+
+</body>
+</html>
